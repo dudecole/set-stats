@@ -1,0 +1,15 @@
+
+---
+- hosts: localhost
+  connection: local
+
+  vars: 
+    my_var_one: "some string for var one"
+    my_var_two: "some string for var two"
+
+  tasks: 
+  - name: set stats on some variables
+    debug:
+      msg: 
+      - "{{ var_one }}"
+      - "{{ var_two }}"
